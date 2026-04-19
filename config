@@ -28,8 +28,7 @@ default_border pixel 2
 default_floating_border normal
 
 # Pozadí (Wallpaper)
-# Tip: Použijte obrázek s mechem nebo industriální stanicí
-# output * bg /cesta/k/obrazku/ac6_wallpaper.png fill
+output * bg ~/.config/sway/backgrounds/ac6_wallpaper.svg fill
 
 # Status bar (Waybar)
 bar {
