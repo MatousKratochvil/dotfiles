@@ -1,0 +1,22 @@
+# IDE and editor specifics
+.idea/
+.vscode/
+*.swp
+*~
+.history/
+
+# Agent directory
+.junie/
+
+# Logs
+*.log
+
+# Backups
+*.bak
+
+# OS specifics
+.DS_Store
+Thumbs.db
+
+# Dependencies (if any)
+node_modules/

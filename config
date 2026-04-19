@@ -1,0 +1,47 @@
+# --- Armored Core VI Theme ---
+
+# Fonty
+font pango:DejaVu Sans Mono 13
+
+# Proměnné pro barvy
+set $bg-color            #0f0f0f
+set $inactive-bg-color   #222222
+set $text-color          #d1d1d1
+set $inactive-text-color #666666
+set $urgent-bg-color     #ff4500
+set $accent-color        #00ffff
+
+# Barvy oken
+# class                 border              backgr.             text                 indicator           child_border
+client.focused          $accent-color       $bg-color           $text-color          $accent-color       $accent-color
+client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-color $inactive-bg-color  $inactive-bg-color
+client.unfocused        $inactive-bg-color  $bg-color           $inactive-text-color $inactive-bg-color  $inactive-bg-color
+client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color          $urgent-bg-color    $urgent-bg-color
+
+# Mezerování (Gaps) - Industriální vzhled vyžaduje prostor
+gaps inner 10
+gaps outer 5
+smart_gaps on
+
+# Dekorace oken
+default_border pixel 2
+default_floating_border normal
+
+# Pozadí (Wallpaper)
+# Tip: Použijte obrázek s mechem nebo industriální stanicí
+# output * bg /cesta/k/obrazku/ac6_wallpaper.png fill
+
+# Status bar (Waybar)
+bar {
+    swaybar_command waybar
+}
+
+# --- Input: Integrovaná Kamera & Zvuk ---
+# Zvukové klávesy (vyžaduje pactl z libpulse nebo wireplumber)
+bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+# --- Startování aplikací ---
+# Terminál (foot je minimalistický a rychlý)
+bindsym Mod4+Return exec foot
